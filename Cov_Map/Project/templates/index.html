@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>疫情数据可视化大屏</title>
+    <script src="../static/js/echarts.js"></script>
+    <script src="../static/js/china.js"></script>
+    <script src="../static/js/flexible.js"></script>  <!--引入flexible.js文件,为不同的设备设置1rem的大小-->
+    <script src="../static/js/jquery-3.6.0.min.js"></script>
+    <script src="../static/js/echarts-wordcloud.min.js"></script>
+    <link rel="stylesheet" href="../static/css/index.css">
+</head>
+<body>
+<div class="header">
+    <h1>全国疫情数据可视化大屏</h1>
+    <div class="showtime"></div>
+</div>
+<!-- 页面主体 -->
+<section class="mainbox">
+    <div class="column">
+        <div class="panel msg">
+            <h2><img alt="疫情热点""src="../image/疫情热点.png" height="40"></h2>
+            <div class="chart" id="cov_hotmsg">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line">
+            <h2>2022年全国疫情数据</h2>
+            <div class="chart" id="multi-line-china"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar">
+            <h2>全国现存确诊TOP10城市</h2>
+            <div class="chart" id='dynamic-bar'></div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="no">
+            <div class="no-hd">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="no-bd">
+                <ul>
+                    <li>现存确珍</li>
+                    <li>累计疑似</li>
+                    <li>累计治愈</li>
+                    <li>累计死亡</li>
+                </ul>
+            </div>
+        </div>
+        <div class="map">
+            <h2>全国疫情地图</h2>
+            <div class='chart' id='map_chart'></div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="panel line" id="right">
+            <h2>重庆最近七天疫情新增数据</h2>
+            <div class="chart" id='multi-line-cq'></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel bar" id="right">
+            <h2>重庆本土新增TOP5地区</h2>
+            <div class="chart" id="covIncr_cq"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel worcloud" id="right">
+            <h2 class="wordcloud_title">今日百度热搜</h2>
+            <div id = 'wordcloud' class="chart"></div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+    <script src="../static/js/ec-wordcloud.js"></script>
+    <script src="../static/js/ec-china_map.js"></script>
+    <script src="../static/js/ec-china_line.js"></script>
+    <script src="../static/js/ec-china_bar.js"></script>
+    <script src="../static/js/ec-cq_bar.js"></script>
+    <script src="../static/js/controller.js"></script>
+</section>
+</body>
+</html>
